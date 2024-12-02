@@ -13,3 +13,6 @@ out
 **/public/worker-*.js.map
 
 .env
+
+# Local Netlify folder
+.netlify
