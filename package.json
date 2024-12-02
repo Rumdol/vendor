@@ -12,15 +12,17 @@
 	"eslintConfig": {
 		"extends": "react-app"
 	},
-  "scripts": {
-    "dev": "next",
-    "start": "next start",
-    "lint": "eslint components",
-    "build": "next build",
-    "export": "next build && next export",
-    "start:static": "serve out",
-    "now-build": "next build"
-  },
+	"scripts": {
+		"dev": "next",
+		"start": "next start",
+		"lint": "eslint components",
+		"build": "next build",
+		"build:server": "NEXT_TARGET=server next build",
+		"export:server": "NEXT_TARGET=server next export",
+		"export": "npm run build:server && npm run export:server",
+		"start:static": "serve",
+		"now-build": "next build"
+	},
 	"dependencies": {
 		"@emotion/react": "^11.11.1",
 		"@emotion/styled": "^11.11.0",
