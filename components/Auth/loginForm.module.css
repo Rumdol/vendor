@@ -44,3 +44,17 @@
 .loginButton:hover {
 	background-color: #28b3a6;
 }
+.inputField {
+	width: 100%; /* Fixed width */
+	resize: none; /* Non-resizable */
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	transition: border 0.3s;
+  }
+  
+  .inputField.error {
+	border-color: red;
+  }
+  
