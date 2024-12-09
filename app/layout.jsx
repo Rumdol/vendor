@@ -1,6 +1,5 @@
 import Providers from "@/components/Providers";
 import '@/styles/globals.css';
-
 import { Roboto } from 'next/font/google'
 
 const roboto = Roboto({
@@ -12,15 +11,13 @@ const roboto = Roboto({
 export const viewport  = {
 	themeColor: '#673ab7',
 }
-
 export const metadata = {
-    title: 'Todo App',
-    description: "An example of NextJS app with 100% accessible lighthouse score",
+    title: 'Romdul',
+    description: "Perfume store for Vendor",
 
     manifest: "/static/manifest.json"
 
 }
-
 export default function RootLayout({ children }) {
     return <html lang="en-gb" className={roboto.className}>
         <Providers>
