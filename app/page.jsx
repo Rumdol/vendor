@@ -1,12 +1,9 @@
-import Todo from '@/components/Todo'
-import Dashboard from '@/app/dashboard/page'
-
-export default async function Index() {
-
-	return (
-		<main>
-			<Todo />
-			<Dashboard />
-		</main>
-	)
+import LoginFormPage from './loginform/page';
+export default function HomePage() {
+  return (
+    <div className="min-h-screen flex items-left justify-left bg-white">
+      {/*<Dashboard/>*/}
+      <LoginFormPage/>
+    </div>
+  );
 }
