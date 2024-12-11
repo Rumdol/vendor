@@ -1,36 +1,35 @@
 .container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+  .imageContainer {
+	flex: 0 0 auto;
 	display: flex;
-	justify-content: left;
+	justify-content: flex-start;
 	align-items: center;
-	height: 100%;
-	background-color: #ffffff;
-	width: 100%;
-	box-sizing: border-box;
-}
-
-.imageContainer {
-	flex: 1;
-	display: flex;
-	justify-content: left;
-	align-items: left;
-	margin-right: 260px;
-}
-
-.image {
+	margin-right: 250px;
+	margin-left: -240px;
+  }
+  
+  .image {
 	max-width: 734px;
 	width: 100%;
 	height: auto;
-}
-
-.form {
-	flex: 1;
-	max-width: 600px;
+  }
+  
+  .form {
+	max-width: 700px;
 	padding: 40px;
 	background-color: #ffffff;
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
+  }
+  
 .loginButton {
 	background-color: #2ec4b6;
 	color: white;
@@ -45,8 +44,8 @@
 	background-color: #28b3a6;
 }
 .inputField {
-	width: 100%; /* Fixed width */
-	resize: none; /* Non-resizable */
+	width: 100%;
+	resize: none;
 	padding: 10px;
 	margin-bottom: 10px;
 	border: 1px solid #ccc;
@@ -57,4 +56,3 @@
   .inputField.error {
 	border-color: red;
   }
-  

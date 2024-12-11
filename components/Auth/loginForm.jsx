@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 import Alert from "../UI/Alert";
 import styles from "./loginForm.module.css";
 
-export default function LoginForm() {
+export default function LoginForm({ onLoginSuccess }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -16,23 +16,28 @@ export default function LoginForm() {
     setError("");
     setSuccess("");
 
-    if (!email && !password) {
+    // Check if email and password are provided
+    if (!email || !password) {
       setError("Fill in both email and password.");
       return;
     }
 
+    // Validate email format
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       setError("Invalid email format.");
       return;
     }
 
+    // Validate password length
     if (password.length < 8) {
       setError("Password must be at least 8 characters long.");
       return;
     }
 
+    // If everything is valid, set success and call the login success callback
     setSuccess("Login successful!");
+    onLoginSuccess(); // This will update the parent component's state to show the dashboard
   };
 
   return (
@@ -49,7 +54,7 @@ export default function LoginForm() {
       {/* Form container */}
       <div className={styles.formContainer}>
         <form onSubmit={handleSubmit} className={`${styles.form} shadow-md`}>
-          <h1 className="text-2xl font-bold mb-4 text-center">Welcom to Romdul</h1>
+          <h1 className="text-2xl font-bold mb-4 text-center">Welcome to Romdul</h1>
           <p className="text-center mb-6">Login into your account</p>
           {error && <Alert message={error} type="error" />}
           {success && <Alert message={success} type="success" />}

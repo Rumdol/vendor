@@ -2,10 +2,9 @@ import LoginForm from '../../components/Auth/loginForm';
 
 const LoginFormPage = () => {
   return (
-    <div className="max-h-screen flex items-center justify-center bg-white-100">
+    <div className="min-h-screen flex items-center justify-center bg-black">
       <LoginForm />
     </div>
   );
 };
-
 export default LoginFormPage;
