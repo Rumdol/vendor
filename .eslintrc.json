@@ -1,3 +1,12 @@
 {
-    "extends": ["react-app", "plugin:jsx-a11y/recommended"]
+    "extends": [
+        "react-app",
+        "plugin:jsx-a11y/recommended"
+    ],
+    "plugins": [
+        "flowtype"
+    ],
+    "rules": {
+        // Add any specific rules you want to customize
+    }
 }

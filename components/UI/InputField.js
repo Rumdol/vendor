@@ -1,4 +1,3 @@
-// components/UI/InputField.js
 export default function InputField({ type, placeholder, value, onChange, label }) {
     return (
         <div className="mb-4">

@@ -15,7 +15,9 @@ export const metadata = {
     title: 'Romdul',
     description: "Perfume store for Vendor",
 
-    manifest: "/static/manifest.json"
+    icons: {
+        icon: '/static/img/logo.png',
+      },
 
 }
 export default function RootLayout({ children }) {
