@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 
-export default function CardforDashboard() {
+export default function DashboardCard() {
   const data = [
     {
       title: "Sales",
