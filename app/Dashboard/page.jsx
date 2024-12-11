@@ -1,6 +1,6 @@
 'use client';
 import VerticalTabs from '@/components/Tabbar/tabs';
-import DashboardCard from '@/components/Dashboard/Card';
+import DashboardCard from '@/components/DashboardComponent/Card';
 
 export default function DashboardPage() {
 	return (

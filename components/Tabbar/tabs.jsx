@@ -4,7 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import CardforDashboard from '../Dashboard/Card';
+import CardforDashboard from '../DashboardComponent/Card';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
