@@ -6,8 +6,8 @@ import Typography from '@mui/material/Typography';
 export default function DashboardCard() {
   const data = [
     {
-      title: "Sales",
-      value: "$1,234.00",
+      title: "Total Order",
+      value: "20",
       icon: "/static/img/shopping-cart.png",
       color: "#FFF7E8",
     },
@@ -18,9 +18,9 @@ export default function DashboardCard() {
       color: "#E5F9E5",
     },
     {
-      title: "Total Customer",
-      value: "20",
-      icon: "/static/img/customer.png",
+      title: "Total Revenue",
+      value: "$200",
+      icon: "/static/img/revenue.png",
       color: "#E5F9FF",
     }
   ];
@@ -33,7 +33,7 @@ export default function DashboardCard() {
         justifyContent: 'flex-start',
         gap: '16px',
         padding: '20px',
-        backgroundColor: '#f9f9f9',
+        backgroundColor: '#fdfefe',
       }}
     >
       {data.map((item, index) => (
