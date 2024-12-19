@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import CardforDashboard from '../DashboardComponent/Card';
+import ProductTable from '../Product/Producttable';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -19,7 +20,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Typography component="div">{children}</Typography>
         </Box>
       )}
     </div>
@@ -47,7 +48,6 @@ export default function VerticalTabs() {
   };
 
   const tabs = [
-    { label: 'Home', icon: '/static/img/home.png' },
     { label: 'Dashboard', icon: '/static/img/dashboard.png' },
     { label: 'Orders', icon: '/static/img/order.png' },
     { label: 'Products', icon: '/static/img/product.png' },
@@ -72,7 +72,7 @@ export default function VerticalTabs() {
           flexDirection: 'column',
           alignItems: 'center',
           padding: '16px 0',
-          bgcolor: '#f9f9f9',
+          bgcolor: '#fdfefe',
         }}
       >
         {/* Logo Section */}
@@ -128,21 +128,18 @@ export default function VerticalTabs() {
       {/* Main Content */}
       <Box sx={{ flex: 1, overflowY: 'auto' }}>
         <TabPanel value={value} index={0}>
-          Home Content
-        </TabPanel>
-        <TabPanel value={value} index={1}>
           <CardforDashboard />
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel value={value} index={1}>
           Orders Content
         </TabPanel>
-        <TabPanel value={value} index={3}>
-          Products Content
+        <TabPanel value={value} index={2}>
+          <ProductTable/>
         </TabPanel>
-        <TabPanel value={value} index={4}>
+        <TabPanel value={value} index={3}>
           Customers Content
         </TabPanel>
-        <TabPanel value={value} index={5}>
+        <TabPanel value={value} index={4}>
           Settings Content
         </TabPanel>
       </Box>
