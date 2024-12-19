@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import LoginForm from '@/components/Auth/loginForm';
 import DashboardPage from './Dashboard/page';
+import ThehomePage from './Homepage/pages';
 
 export default function HomePage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -17,6 +18,7 @@ export default function HomePage() {
         <LoginForm onLoginSuccess={handleLoginSuccess} />
       ) : (
         <DashboardPage/>
+        
       )}
     </div>
   );
