@@ -20,10 +20,11 @@ const AddBrandForm = () => {
       <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl">
         <div className="space-y-4">
           <div>
-            <label className="block text-sm mb-2">
+            <label htmlFor="brandName" className="block text-sm mb-2">
               Brand Name <span className="text-red-500">*</span>
             </label>
             <input
+              id="brandName"
               type="text"
               value={brandName}
               onChange={(e) => setBrandName(e.target.value)}

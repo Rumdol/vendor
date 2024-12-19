@@ -33,11 +33,13 @@ const AddProductForm = () => {
       <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl">
         <div className="space-y-4">
           <div>
-            <label className="block text-sm mb-2">Product Brand*</label>
+            <label htmlFor="brand" className="block text-sm mb-2">Product Brand*</label>
             <select
+              id="brand"
               name="brand"
               value={formData.brand}
               onChange={handleChange}
+              onBlur={handleChange}
               className="w-full border rounded-md p-2 focus:ring-2 focus:ring-teal-500"
             >
               <option value="">Select Brand</option>
@@ -47,36 +49,39 @@ const AddProductForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">Product For</label>
-            <div className="flex gap-4">
-              <label className="flex items-center">
-                <input
-                  type="radio"
-                  name="productFor"
-                  value="Men"
-                  checked={formData.productFor === 'Men'}
-                  onChange={handleChange}
-                  className="mr-2"
-                />
-                Men
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="radio"
-                  name="productFor"
-                  value="Women"
-                  checked={formData.productFor === 'Women'}
-                  onChange={handleChange}
-                  className="mr-2"
-                />
-                Women
-              </label>
-            </div>
+            <fieldset>
+              <legend className="block text-sm mb-2">Product For</legend>
+              <div className="flex gap-4">
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    name="productFor"
+                    value="Men"
+                    checked={formData.productFor === 'Men'}
+                    onChange={handleChange}
+                    className="mr-2"
+                  />
+                  Men
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    name="productFor"
+                    value="Women"
+                    checked={formData.productFor === 'Women'}
+                    onChange={handleChange}
+                    className="mr-2"
+                  />
+                  Women
+                </label>
+              </div>
+            </fieldset>
           </div>
 
           <div>
-            <label className="block text-sm mb-2">Product Name*</label>
+            <label htmlFor="productName" className="block text-sm mb-2">Product Name*</label>
             <input
+              id="productName"
               type="text"
               name="productName"
               value={formData.productName}
@@ -87,8 +92,11 @@ const AddProductForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">Product Image*</label>
-            <div className="border-2 border-dashed rounded-md p-4">
+            <label htmlFor="productImage" className="block text-sm mb-2">Product Image*</label>
+            <div 
+              id="productImage"
+              className="border-2 border-dashed rounded-md p-4"
+            >
               <div className="flex items-center gap-2">
                 <Upload className="w-5 h-5 text-teal-500" />
                 <span className="text-teal-500">Upload</span>
@@ -100,8 +108,9 @@ const AddProductForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">Product Description*</label>
+            <label htmlFor="description" className="block text-sm mb-2">Product Description*</label>
             <textarea
+              id="description"
               name="description"
               value={formData.description}
               onChange={handleChange}
@@ -111,8 +120,9 @@ const AddProductForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">Price*</label>
+            <label htmlFor="price" className="block text-sm mb-2">Price*</label>
             <input
+              id="price"
               type="text"
               name="price"
               value={formData.price}
@@ -123,8 +133,9 @@ const AddProductForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">Product Size*</label>
+            <label htmlFor="size" className="block text-sm mb-2">Product Size*</label>
             <input
+              id="size"
               type="text"
               name="size"
               value={formData.size}
@@ -135,8 +146,9 @@ const AddProductForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">Fragrance Families*</label>
+            <label htmlFor="fragranceFamily" className="block text-sm mb-2">Fragrance Families*</label>
             <input
+              id="fragranceFamily"
               type="text"
               name="fragranceFamily"
               value={formData.fragranceFamily}
@@ -146,31 +158,33 @@ const AddProductForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">Inventory Status</label>
-            <div className="flex gap-4">
-              <label className="flex items-center">
-                <input
-                  type="radio"
-                  name="inventoryStatus"
-                  value="In Stock"
-                  checked={formData.inventoryStatus === 'In Stock'}
-                  onChange={handleChange}
-                  className="mr-2"
-                />
-                In Stock
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="radio"
-                  name="inventoryStatus"
-                  value="Out Of Stock"
-                  checked={formData.inventoryStatus === 'Out Of Stock'}
-                  onChange={handleChange}
-                  className="mr-2"
-                />
-                Out Of Stock
-              </label>
-            </div>
+            <fieldset>
+              <legend className="block text-sm mb-2">Inventory Status</legend>
+              <div className="flex gap-4">
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    name="inventoryStatus"
+                    value="In Stock"
+                    checked={formData.inventoryStatus === 'In Stock'}
+                    onChange={handleChange}
+                    className="mr-2"
+                  />
+                  In Stock
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    name="inventoryStatus"
+                    value="Out Of Stock"
+                    checked={formData.inventoryStatus === 'Out Of Stock'}
+                    onChange={handleChange}
+                    className="mr-2"
+                  />
+                  Out Of Stock
+                </label>
+              </div>
+            </fieldset>
           </div>
         </div>
 
